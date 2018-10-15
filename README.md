@@ -1,2 +1,2 @@
-Before running program, go the terminal and the command: 
+Before running the program, go the terminal and run the command: 
 sass --watch stylesheets:css

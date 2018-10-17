@@ -44,7 +44,7 @@ function showMysteryWord() {
     }else {
       guess.push('-')
     }
-    
+
   }
   console.log(guess);
 }

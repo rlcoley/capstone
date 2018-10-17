@@ -17,15 +17,6 @@ var guess = []
 var words = [w1,w2,w3,w4]
 
 
-// clear input section when Guess btn is clicked //
-// function clearInput() {
-submitGuess.addEventListener('click',function() {
-  console.log(input.value);
-  // console.log(inputArea.keypress);
-  input.value = "";
-})
-
-
 function showMysteryWord() {
   randomWord = Math.floor(Math.random()* words.length);
   theWord = words[randomWord].word.split('')
@@ -36,7 +27,7 @@ function showMysteryWord() {
   for (var i = 0; i < theWord.length; i++) {
     var boxes = document.createElement('div');
     boxes.className = 'boxes'
-    boxes.id = 'box'+ i
+    boxes.id = 'box'+ i;
     document.body.appendChild(boxes);
     if (theWord[i] == ' ') {
       boxes.style.border = 'none';
@@ -48,6 +39,26 @@ function showMysteryWord() {
   }
   console.log(guess);
 }
+
+// clear input section when Guess btn is clicked //
+// function clearInput() {
+submitGuess.addEventListener('click',function() {
+  console.log(input.value);
+  // console.log(inputArea.keypress);
+  checkGuess()
+  input.value = "";
+})
+
+// submitGuess.addEventListener('click',checkGuess)
+
+function checkGuess() {
+  for (var i = 0; i < theWord.length; i++) {
+    if (theWord[i] == input.value ) {
+      document.getElementById('box'+[i]).innerHTML = theWord[i]
+    }
+  }
+}
+
 
 function giveHint() {
   showHint.innerHTML = theHint;

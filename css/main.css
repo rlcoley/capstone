@@ -1,3 +1,10 @@
+body {
+  background-color: tan; }
 
+.boxes {
+  border: 2px solid;
+  height: 20px;
+  width: 20px;
+  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

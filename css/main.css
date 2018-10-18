@@ -5,6 +5,16 @@ body {
   border: 2px solid;
   height: 20px;
   width: 20px;
-  display: inline-block; }
+  display: inline-block;
+  overflow: hidden; }
+
+.lettersGuessed {
+  position: absolute;
+  top: 70px; }
+
+#wrong {
+  border: 3px solid;
+  height: 16px;
+  width: 100px; }
 
 /*# sourceMappingURL=main.css.map */

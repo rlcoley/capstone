@@ -7,12 +7,13 @@ var hintButton = document.getElementById('hint_btn')
 var newGame = document.getElementById('newgame')
 var submitGuess = document.getElementById("clear")
 var input = document.getElementById('input')
+var wrong = document.getElementById('wrong')
 
 var randomWord;
 var theWord;
 var theHint;
 var guess = []
-// var wrongLetters = []
+var usedLetters = []
 
 var words = [w1,w2,w3,w4]
 
@@ -43,30 +44,43 @@ function showMysteryWord() {
 // clear input section when Guess btn is clicked //
 // function clearInput() {
 submitGuess.addEventListener('click',function() {
-  console.log(input.value);
+  // console.log(input.value);
   // console.log(inputArea.keypress);
-  checkGuess()
-  input.value = "";
+  // input.value = "";
+  // checkGuess()
 })
 
-// submitGuess.addEventListener('click',checkGuess)
+submitGuess.addEventListener('click',checkGuess)
+
 
 function checkGuess() {
   for (var i = 0; i < theWord.length; i++) {
-    if (theWord[i] == input.value ) {
+    // check if game is done then, check later then check if they //
+    // if any box id .innerHTML = " ". game not done loop through //
+    if (theWord[i].toLowerCase() == input.value.toLowerCase() ) {
       document.getElementById('box'+[i]).innerHTML = theWord[i]
     }
   }
+  usedLetters.push(input.value);
+  wrong.innerHTML = usedLetters.join(", ");
+  input.value = "";
 }
 
+
+// function clear() {
+//
+// }
+
+
+newGame.addEventListener('click',function() {
+  showMysteryWord()
+  // clear()
+
+})
 
 function giveHint() {
   showHint.innerHTML = theHint;
 }
-
-newGame.addEventListener('click',function() {
-  showMysteryWord()
-})
 
 hintButton.addEventListener('click', function() {
   giveHint()

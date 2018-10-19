@@ -7,8 +7,9 @@ var hintButton = document.getElementById('hint_btn')
 var newGame = document.getElementById('newgame')
 var submitGuess = document.getElementById("clear")
 var input = document.getElementById('input')
-var wrong = document.getElementById('wrong')
+var used = document.getElementById('used')
 var wordBox = document.getElementById('wordBox')
+var inTheWord;
 
 var randomWord;
 var theWord;
@@ -68,7 +69,6 @@ submitGuess.addEventListener('click',checkGuess)
 
 
 function checkGuess() {
-  var inTheWord;
   for (var i = 0; i < theWord.length; i++) {
      inTheWord = document.getElementById('box'+[i])
     // check if game is done then, check later then check if they //
@@ -83,7 +83,7 @@ function checkGuess() {
     }
   }
   usedLetters.push(input.value);
-  wrong.innerHTML = usedLetters.join(", ");
+  used.innerHTML = usedLetters.join(", ");
   if (counter == 0) {
     winner();
   }
@@ -107,6 +107,8 @@ function giveHint() {
 newGame.addEventListener('click',function() {
   startGame()
   showHint.innerHTML = "";
+  usedLetters = []
+  used.innerHTML = " ";
 
 })
 

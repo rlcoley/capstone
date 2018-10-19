@@ -1,5 +1,9 @@
 body {
-  background-color: tan; }
+  background-color: tan;
+  font-family: 'Chakra Petch', sans-serif; }
+
+input, button {
+  font-family: 'Chakra Petch', sans-serif; }
 
 .boxes {
   border: 2px solid;
@@ -12,7 +16,7 @@ body {
   position: absolute;
   top: 80px; }
 
-#wrong {
+#used {
   border-top: 3px solid;
   height: 16px;
   width: 150px; }

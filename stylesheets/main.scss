@@ -1,7 +1,11 @@
 body{
   background-color: tan;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
+input,button{
+  font-family: 'Chakra Petch', sans-serif;
+}
 .boxes{
   border: 2px solid;
   height: 20px;
@@ -16,7 +20,7 @@ body{
 }
 
 
-#wrong{
+#used{
   border-top: 3px solid;
   height: 16px;
   width: 150px;

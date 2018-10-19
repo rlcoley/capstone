@@ -3,18 +3,19 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
-    <title>Wheel of Fortune</title>
+    <title>Hang Man</title>
   </head>
   <body>
 
     <input id="input" type="text" name="" value="">
     <button id="clear" type="button">Guess</button>
 
-    <button id="newgame" type="button" name="button">New Game</button>
+    <button id="newgame" type="button">New Game</button>
 
-    <button id="hint_btn" onclick="giveHint()" type="button" name="button">Need a Hint?</button>
+    <button id="hint_btn" type="button">Need a Hint?</button>
     <div id="hint_text"></div>
 
+    <div id="wordBox"></div>
     <div class="lettersGuessed">
       <div id="">Used Letters</div>
       <div id="wrong"></div>

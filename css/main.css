@@ -10,11 +10,11 @@ body {
 
 .lettersGuessed {
   position: absolute;
-  top: 70px; }
+  top: 80px; }
 
 #wrong {
-  border: 3px solid;
+  border-top: 3px solid;
   height: 16px;
-  width: 100px; }
+  width: 150px; }
 
 /*# sourceMappingURL=main.css.map */

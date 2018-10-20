@@ -1,27 +1,19 @@
+@import "allthewords";
+@import "controls";
+@import "boxes";
+@import "lettersguess_used";
+
+*{
+  font-family: 'Chakra Petch', sans-serif;
+}
 body{
   background-color: tan;
-  font-family: 'Chakra Petch', sans-serif;
 }
 
-input,button{
-  font-family: 'Chakra Petch', sans-serif;
-}
-.boxes{
-  border: 2px solid;
-  height: 20px;
-  width: 20px;
-  display: inline-block;
-  overflow: hidden;
+.title{
+  margin-left: 40%;
 }
 
-.lettersGuessed{
-  position:absolute;
-  top: 80px;
-}
-
-
-#used{
-  border-top: 3px solid;
-  height: 16px;
-  width: 150px;
-}
+// input,button{
+//   font-family: 'Chakra Petch', sans-serif;
+// }
